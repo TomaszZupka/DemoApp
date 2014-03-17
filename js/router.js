@@ -4,20 +4,32 @@ define([
 		'backbone',
 		'views/home',
 		'views/survey/simOrPhone',
-
+		'views/survey/detailOrBusiness',
+		'views/survey/agreementTime',
+		'views/survey/agreementCosts',
+		'views/survey/phoneAmount',
+		'views/survey/smsAmount',
+		'views/survey/dataAmount',
+		'views/endShowAndSendData',
 		'jqm'
 ], function($, _, Backbone,
 			HomeView,
-			SimOrPhoneView) {
+			SimOrPhoneView, DetailOrBusinessView, AgreementTimeView, AgreementCostsView,
+			PhoneAmountView, SmsAmountView, DataAmountView, EndShowAndSendData) {
 	'use strict';
-	//var slider = new PageSlider($('body'));
 	var Router = Backbone.Router.extend({
 		//define routes and mapping route to the function
 		routes : {
 			'' : 'showHome', //home view
 			'home' : 'showHome', //home view as well
 			'surveySimOrPhone' : 'showSimOrPhone',
-			
+			'surveyDetailOrBusiness' : 'showDetailOrBusiness',
+			'surveyAgreementTime' : 'showAgreementTime',
+			'surveyAgreementCosts' : 'showAgreementCosts',
+			'surveyPhoneAmount' : 'showPhoneAmount',
+			'surveySmsAmount' : 'showSmsAmount',
+			'surveyDataAmount' : 'showDataAmount',
+			'endShowAndSendData' : 'showEndShowAndSendData',
 			'*actions' : 'defaultAction' //default action
 		},
 
@@ -68,7 +80,33 @@ define([
 			this.changePage(new SimOrPhoneView());
 		},
 		
-	
+		showDetailOrBusiness : function(actions) {
+			this.changePage(new DetailOrBusinessView());
+		},
+		
+		showAgreementTime : function(actions) {
+			this.changePage(new AgreementTimeView());
+		},
+		
+		showAgreementCosts : function(actions) {
+			this.changePage(new AgreementCostsView());
+		},
+		
+		showPhoneAmount : function(actions) {
+			this.changePage(new PhoneAmountView());
+		},
+		
+		showSmsAmount : function(actions) {
+			this.changePage(new SmsAmountView());
+		},
+		
+		showDataAmount : function(actions) {
+			this.changePage(new DataAmountView());
+		},
+		
+		showEndShowAndSendData : function(actions) {
+			this.changePage(new EndShowAndSendData());
+		},
 
 		changePage : function(view) {
 			//add the attribute ‘data-role=”page” ‘ for each view’s div
