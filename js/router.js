@@ -43,27 +43,7 @@ define([
 				return false;
 			});
 
-			var defs = $.mobile.changePage.defaults;
-			$('a[data-role="button"]').live('click', function(event) {
-				var $this = $(this);
 
-				if ($this.attr('data-transition')) {
-					$.mobile.changePage.defaults.transition = $this.attr('data-transition');
-				} else {
-					$.mobile.changePage.defaults.transition = defs.transition;
-				}
-
-				if ($this.attr('data-direction')) {
-					$.mobile.changePage.defaults.reverse = $this.attr('data-direction') == 'reverse';
-				} else {
-					$.mobile.changePage.defaults.reverse = false;
-				}
-
-				if ($this.attr('data-rel') === 'back') {
-					window.history.back();
-					return false;
-				}
-			});
 
 			this.firstPage = true;
 		},
