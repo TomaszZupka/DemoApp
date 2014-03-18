@@ -11,11 +11,12 @@ define([
 		'views/survey/smsAmount',
 		'views/survey/dataAmount',
 		'views/endShowAndSendData',
+		'views/navpanel',
 		'jqm'
 ], function($, _, Backbone,
 			HomeView,
 			SimOrPhoneView, DetailOrBusinessView, AgreementTimeView, AgreementCostsView,
-			PhoneAmountView, SmsAmountView, DataAmountView, EndShowAndSendData) {
+			PhoneAmountView, SmsAmountView, DataAmountView, EndShowAndSendDataView, NavpanelView) {
 	'use strict';
 	var Router = Backbone.Router.extend({
 		//define routes and mapping route to the function
@@ -105,7 +106,7 @@ define([
 		},
 		
 		showEndShowAndSendData : function(actions) {
-			this.changePage(new EndShowAndSendData());
+			this.changePage(new EndShowAndSendDataView());
 		},
 
 		changePage : function(view) {

@@ -1,5 +1,5 @@
 .logo {
-	width: 400px;
+	width: 100%;
 	max-width: 400px;
 }
 
@@ -49,191 +49,94 @@ p.intro {
 	padding: 1.5em 15px 0;
 }
 
-/* Basic styles */
-.grid-survey .ui-body {
-	text-align: left;
-	border-color: #ddd;
-}
-.grid-survey p {
-	color: #777;
-	line-height: 140%
-}
-
-/* Stack all blocks to start */
-.grid-survey .ui-block-a, .grid-survey .ui-block-b, .grid-survey .ui-block-c {
-	width: 100%;
-	float: none;
-}
-/* Collapsing borders */
-.grid-survey > div + div .ui-body {
-	border-top-width: 0;
-}
-/* 1st breakpoint - Float B and C, leave A full width on top */
-@media all and (min-width: 42em) {
-	.grid-survey {
-		overflow: hidden; /* Use this or a "clearfix" to give the container height */
-	}
-	.grid-survey .ui-body {
-		min-height: 14em;
-	}
-	.grid-survey #custom-border-radius > div {
-		min-height: 14em;
-	}
-
-	.grid-survey .ui-block-a, .grid-survey .ui-block-c {
-		width: 10%;
-	}
-	.grid-survey .ui-block-a {
-		float: left;
-	}
-	.grid-survey .ui-block-c {
-		float: right;
-	}
-	.grid-survey .ui-block-b p {
-		font-size: .8em;
-	}
-	.grid-survey > div + div .ui-body {
-		border-top-width: 1px;
-	}
-	.grid-survey > div:first-child .ui-body {
-		border-bottom-width: 0;
-	}
-	.grid-survey > div:last-child .ui-body {
-		border-left-width: 0;
-	}
-}
-/* 2nd breakpoint - Float all, 50/25/25 */
-@media all and (min-width: 55em) {
-	.grid-survey .ui-body {
-		min-height: 18em;
-	}
-	.grid-survey #custom-border-radius > div {
-		min-height: 18em;
-	}
-	.grid-survey .ui-block-a, .grid-survey .ui-block-c {
-		width: 10%;
-	}
-	.grid-survey .ui-block-a {
-		float: left;
-	}
-	.grid-survey .ui-block-c {
-		float: right;
-	}
-	.grid-survey .ui-block-b {
-		float: left;
-		width: 80%;
-	}
-	.grid-survey > div:first-child .ui-body {
-		border-bottom-width: 1px;
-	}
-	.grid-survey > div + div .ui-body {
-		border-left-width: 0;
-	}
-}
-/* 3rd breakpoint - Bump up font size at very wide screens */
-@media all and (min-width: 75em) {
-	.grid-survey .ui-body {
-		font-size: 125%;
-	}
-	.grid-survey .ui-block-a, .grid-survey .ui-block-c {
-		width: 10%;
-	}
-	.grid-survey .ui-block-a {
-		float: left;
-	}
-	.grid-survey .ui-block-c {
-		float: right;
-	}
-	.grid-survey .ui-block-b {
-		float: left;
-		width: 80%;
-	}
-}
-
-
 
 /* Basic styles */
-.grid-logo.ui-body {
+.grid-logo .ui-body {
     text-align: left;
     border-color: #ddd;
 }
-.grid-logop {
+.grid-logo p {
     color: #777;
     line-height: 140%
 }
 /* Stack all blocks to start */
-.grid-logo.ui-block-a,
-.grid-logo.ui-block-b,
-.grid-logo.ui-block-c {
+.grid-logo .ui-block-a,
+.grid-logo .ui-block-b,
+.grid-logo .ui-block-c {
     width: 100%;
     float: none;
 }
 /* Collapsing borders */
-.grid-logo> div + div .ui-body {
+.grid-logo > div + div .ui-body {
     border-top-width: 0;
 }
 /* 1st breakpoint - Float B and C, leave A full width on top */
 @media all and (min-width: 42em) {
-    .grid-logo{
+    .grid-logo {
         overflow: hidden; /* Use this or a "clearfix" to give the container height */
     }
-    .grid-logo.ui-body {
-       min-height: 14em;
+    .grid-logo .ui-body {
+       min-height: 4em;
     }
-    .grid-logo.ui-block-b,
-    .grid-logo.ui-block-c {
+    .grid-logo .ui-block-b,
+    .grid-logo .ui-block-c {
       float: left;
       width: 49.95%;
     }
-    .grid-logo.ui-block-b p,
-    .grid-logo.ui-block-c p {
+    .grid-logo .ui-block-b p,
+    .grid-logo .ui-block-c p {
       font-size: .8em;
     }
-    .grid-logo> div + div .ui-body {
+    .grid-logo > div + div .ui-body {
         border-top-width: 1px;
     }
-    .grid-logo> div:first-child .ui-body {
+    .grid-logo > div:first-child .ui-body {
         border-bottom-width: 0;
     }
-    .grid-logo> div:last-child .ui-body {
+    .grid-logo > div:last-child .ui-body {
         border-left-width: 0;
     }
 }
 /* 2nd breakpoint - Float all, 50/25/25 */
 @media all and (min-width: 55em) {
-    .grid-logo.ui-body {
+    .grid-logo .ui-body {
        min-height: 18em;
     }
-    .grid-logo.ui-block-a,
-    .grid-logo.ui-block-c {
+    .grid-logo .ui-block-a,
+    .grid-logo .ui-block-c {
       float: left;
       width: 49.95%;
     }
-    .grid-logo.ui-block-b,
-    .grid-logo.ui-block-c {
+    .grid-logo .ui-block-b,
+    .grid-logo .ui-block-c {
       float: left;
       width: 24.925%;
     }
-    .grid-logo> div:first-child .ui-body {
+    .grid-logo > div:first-child .ui-body {
         border-bottom-width: 1px;
     }
-    .grid-logo> div + div .ui-body {
+    .grid-logo > div + div .ui-body {
         border-left-width: 0;
     }
 }
 /* 3rd breakpoint - Bump up font size at very wide screens */
 @media all and (min-width: 75em) {
-    .grid-logo.ui-body {
+    .grid-logo .ui-body {
       font-size: 125%;
     }
-    .grid-logo.ui-block-a,
-    .grid-logo.ui-block-c {
+    .grid-logo .ui-block-a,
+    .grid-logo .ui-block-c {
       float: left;
       width: 49.95%;
     }
-    .grid-logo.ui-block-b,
-    .grid-logo.ui-block-c {
+    .grid-logo .ui-block-b,
+    .grid-logo .ui-block-c {
       float: left;
       width: 24.925%;
     }
 }
+
+.grid-survey .ui-block-a {
+       min-height: 24em;
+    }
+    

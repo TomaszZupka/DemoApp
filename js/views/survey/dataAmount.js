@@ -2,13 +2,15 @@ define([
 		'jquery',
 		'underscore',
 		'backbone',
-		'text!../../../templates/survey/dataAmount.html'
-], function($, _, Backbone, tmpl) {
+		'text!../../../templates/survey/dataAmount.html',
+		'text!../../../templates/navpanel.html'
+], function($, _, Backbone, tmpl, navtmpl) {
 
 	var DataAmountView = Backbone.View.extend({
 
 		//initialize template
 		template : _.template(tmpl),
+		templateNavtmpl : _.template(navtmpl),
 
 		//render the content into div of view
 		render : function() {
@@ -18,6 +20,9 @@ define([
 			//append the compiled template into view div container
 			$(this.el).html(this.template());
 
+			$(this.el).append(this.templateNavtmpl());
+			$(this.el).find('a[href="#surveyDataAmount"]').addClass("ui-disabled");
+			
 			//return to enable chained calls
 			return this;
 		},

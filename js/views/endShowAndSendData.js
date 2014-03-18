@@ -2,13 +2,15 @@ define([
 		'jquery',
 		'underscore',
 		'backbone',
-		'text!../../templates/endShowAndSendData.html'
-], function($, _, Backbone, tmpl) {
+		'text!../../templates/endShowAndSendData.html',
+		'text!../../templates/navpanel.html'
+], function($, _, Backbone, tmpl, navtmpl) {
 
 	var EndShowAndSendDataView = Backbone.View.extend({
 
 		//initialize template
 		template : _.template(tmpl),
+		templateNavtmpl : _.template(navtmpl),
 
 		//render the content into div of view
 		render : function() {
@@ -17,7 +19,10 @@ define([
 			//$el is cached jQuery object for the view's element.
 			//append the compiled template into view div container
 			$(this.el).append(this.template());
-
+			
+			$(this.el).append(this.templateNavtmpl());
+			$(this.el).find('a[href="#endShowAndSendData"]').addClass("ui-disabled");
+			
 			//return to enable chained calls
 			return this;
 		}
