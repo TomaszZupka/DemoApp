@@ -1,0 +1,32 @@
+<script>
+$.mobile.document.on( "click", "#open-popupArrow", function( evt ) {
+    $( "#popupArrow" ).popup( "open", { x: evt.pageX, y: evt.pageY } );
+    evt.preventDefault();
+});
+</script>
+
+<div data-role="header" data-theme="b">
+	<a href="#" data-role="button" data-icon="home" data-iconpos="notext" data-inline="true" data-direction="reverse">Home</a>
+	<h4>ORANGE</h4>
+	<a href="#navpanel" data-icon="bars" data-iconpos="notext" class="ui-btn-right">Menu</a>
+</div>
+
+<div data-role="content" >
+
+	<div class="ui-grid-solo grid-survey">
+		<div class="ui-block-a">
+			<div data-role="popup" id="popupArrow" data-arrow="true">
+<p>A paragraph inside the popup with an arrow.</p>
+<p>This second paragraph serves to increase the height of the popup</p>
+			</div>
+						<img src="css/images/chart.jpg" width="600" height="454" alt="Planets"
+			usemap="#planetmap">
+
+			<map name="planetmap">
+				<area shape="rect" coords="72,129,99,155" href="#" id="open-popupArrow" class="clickable-area" alt="Sun">
+			</map>
+			
+		</div>
+	</div>
+
+</div>

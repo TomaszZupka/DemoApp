@@ -137,6 +137,15 @@ p.intro {
 }
 
 .grid-survey .ui-block-a {
-       min-height: 24em;
-    }
-    
+	min-height: 24em;
+}
+
+.clickable-area {
+    display: block;
+    width: 100%;
+    height: 300px;
+    background-color: #ffefef;
+}
+.clickable-area:focus {
+    outline: 0;
+}    

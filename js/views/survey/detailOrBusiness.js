@@ -21,7 +21,9 @@ define([
 			$(this.el).html(this.template());
 
 			$(this.el).append(this.templateNavtmpl());
-			$(this.el).find('a[href="#surveyDetailOrBusiness"]').addClass("ui-disabled");
+			var link = $(this.el).find('a[href="#surveyDetailOrBusiness"]');
+			link.addClass("ui-disabled");
+			link.parent().attr('data-icon','false');
 			
 			//return to enable chained calls
 			return this;
