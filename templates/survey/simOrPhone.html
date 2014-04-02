@@ -4,23 +4,25 @@
 	<a href="#navpanel" data-icon="bars" data-iconpos="notext" class="ui-btn-right">Menu</a>
 </div>
 
-<div data-role="content" >
+<div data-role="content" id="surveySimOrPhone">
 
 	<div class="ui-grid-solo grid-survey">
 		<div class="ui-block-a">
 			<h2>Rodzaj oferty:</h2>
-			<form id="thumbnail-radio">
+			<form id="sim-phone" class="thumbnail-radio">
 				<fieldset data-role="controlgroup" data-iconpos="right">
-					<input type="radio" name="radio-choice-w-6" id="radio-choice-w-6a" value="on" checked="checked">
+					<input type="radio" name="sim-phone" id="radio-choice-w-6a" value="sim">
 					<label for="radio-choice-w-6a"> <img src="css/images/orange/sim.jpg" class="mini"> <h2>SIM</h2>
 						<p>
 							Sama karta SIM
-						</p> </label>
-					<input type="radio" name="radio-choice-w-6" id="radio-choice-w-6b" value="off">
+						</p>
+					</label>
+					<input type="radio" name="sim-phone" id="radio-choice-w-6b" value="phone_sim">
 					<label for="radio-choice-w-6b"> <img src="css/images/orange/phone.jpg" class="mini"> <h2>SIM + Telefon</h2>
 						<p>
 							Karta SIM z telefonem
-						</p> </label>
+						</p>
+					</label>
 				</fieldset>
 			</form>
 		</div>

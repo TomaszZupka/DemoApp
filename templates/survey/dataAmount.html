@@ -4,12 +4,12 @@
 	<a href="#navpanel" data-icon="bars" data-iconpos="notext" class="ui-btn-right">Menu</a>
 </div>
 
-<div data-role="content" >
+<div data-role="content" id="surveyDataAmount">
 
 	<div class="ui-grid-solo grid-survey">
 		<div class="ui-block-a">
 			<h2>Wielkość transferu (MB):</h2>
-			<form>
+			<form id="dataAmount">
 				<label for="flip-2">Brany pod uwagę:</label>
 				<select name="flip-2" id="flip-2" data-role="slider" data-track-theme="c" data-theme="c">
 					<option value="no">Nie</option>
@@ -17,9 +17,9 @@
 				</select>
 				<div data-role="rangeslider" data-track-theme="c" data-theme="c">
 					<label for="range-3a">Wielkość:</label>
-					<input type="range" name="range-3a" id="range-3a" min="20" max="200" step="10" value="20">
+					<input type="range" name="min" id="range-3a" min="20" max="200" step="10" value="20">
 					<label for="range-3b">Wielkość:</label>
-					<input type="range" name="range-3b" id="range-3b" min="0" max="200" step="10" value="100">
+					<input type="range" name="max" id="range-3b" min="0" max="200" step="10" value="100">
 				</div>
 			</form>
 		</div>

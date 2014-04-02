@@ -18,12 +18,19 @@ define([
 			//this.el is the root element of Backbone.View. By default, it is a div.
 			//$el is cached jQuery object for the view's element.
 			//append the compiled template into view div container
-			$(this.el).append(this.template());
+			$(this.el).append(this.template({
+				data : localStorage
+			}));
 			
 			$(this.el).append(this.templateNavtmpl());
 			var link = $(this.el).find('a[href="#endShowAndSendData"]');
 			link.addClass("ui-disabled");
 			link.parent().attr('data-icon','false');
+			
+			console.log('TEST');
+			for(var i = 0; i < localStorage.length; i++){
+    			console.log(localStorage.getItem(localStorage.key(i)));
+			}
 			
 			//return to enable chained calls
 			return this;

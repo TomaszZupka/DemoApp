@@ -4,23 +4,25 @@
 	<a href="#navpanel" data-icon="bars" data-iconpos="notext" class="ui-btn-right">Menu</a>
 </div>
 
-<div data-role="content" >
+<div data-role="content" id="surveyDetailOrBusiness">
 
 	<div class="ui-grid-solo grid-survey">
 		<div class="ui-block-a">
 			<h2>Rodzaj klienta:</h2>
-			<form id="thumbnail-radio">
+			<form id="detail-business" class="thumbnail-radio">
 				<fieldset data-role="controlgroup" data-iconpos="right">
-					<input type="radio" name="radio-choice-w-6" id="radio-choice-w-6a" value="on" checked="checked">
+					<input type="radio" name="detail-business" id="radio-choice-w-6a" value="details">
 					<label for="radio-choice-w-6a"> <img src="css/images/orange/detail.png" class="mini"> <h2>Osoba prywatna</h2>
 						<p>
 							Osoba prywana
-						</p> </label>
-					<input type="radio" name="radio-choice-w-6" id="radio-choice-w-6b" value="off">
+						</p>
+					</label>
+					<input type="radio" name="detail-business" id="radio-choice-w-6b" value="business">
 					<label for="radio-choice-w-6b"> <img src="css/images/orange/business.png" class="mini"> <h2>Firma</h2>
 						<p>
 							Firma
-						</p> </label>
+						</p>
+					</label>
 				</fieldset>
 			</form>
 		</div>

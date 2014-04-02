@@ -14,7 +14,7 @@
 	max-width: 5em;
 }
 
-#thumbnail-radio > fieldset > div > div > label > h2 {
+.thumbnail-radio > fieldset > div > div > label > h2 {
 	font-size: 1em;
 	font-weight: 700;
 	display: block;
@@ -24,7 +24,7 @@
 	white-space: nowrap;
 }
 
-#thumbnail-radio > fieldset > div > div > label > p {
+.thumbnail-radio > fieldset > div > div > label > p {
 	font-size: .75em;
 	font-weight: 400;
 	display: block;
@@ -34,7 +34,7 @@
 	white-space: nowrap;
 }
 
-#thumbnail-radio > fieldset > div > div > label {
+.thumbnail-radio > fieldset > div > div > label {
 	min-height: 3.625em;
 	padding-left: 6.25em;
 }

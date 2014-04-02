@@ -9,14 +9,15 @@
 	<div class="ui-grid-solo grid-survey">
 		<div class="ui-block-a">
 			<h2>Koniec</h2>
-			<div data-role="collapsible" data-content-theme="false" data-iconpos="right">
-    			<h4>Zebrane dane ....</h4>
-    			<p>I'm the collapsible content without a theme.</p>
-    			<p>I'm the collapsible content without a theme.</p>
-    			<p>I'm the collapsible content without a theme.</p>
-    			<p>I'm the collapsible content without a theme.</p>
-    			<p>I'm the collapsible content without a theme.</p>
-				</div>
+			<div data-role="collapsible" data-collapsed-icon="carat-d" data-expanded-icon="carat-u" data-iconpos="right">
+				<h4>Zebrane dane ....</h4>
+				<ul data-role="listview" data-inset="false">
+					<% for (var i = 0; i < localStorage.length; i++) { %>
+					<% var key = localStorage.key(i); %>
+					<li><%= localStorage.getItem(key) %></li>
+				<% } %>
+				</ul>
+			</div>
 			<form>
 				<input type="button" data-theme="c" value="Wyślij dane" data-icon="action" data-iconpos="bottom">
 			</form>

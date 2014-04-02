@@ -21,13 +21,26 @@ define([
 			$(this.el).html(this.template());
 
 			$(this.el).append(this.templateNavtmpl());
-			var link = $(this.el).find('a[href="#surveyDetailOrBusiness"]');
-			link.addClass("ui-disabled");
-			link.parent().attr('data-icon','false');
+			this.key = $(this.el).find("div[data-role='content']").attr('id');
+			disableCurrentLink(this.el, this.key);
 			
 			//return to enable chained calls
 			return this;
+		},
+		
+		events: {
+            "pagehide" : "saveFormData",
+            "pagebeforeshow" : "loadFormData"
+        },
+        
+        saveFormData: function(event) {
+        	handleRadioButtonSave(event, this.key);
+		},
+		
+		loadFormData: function(event) {
+			handleRadioButtonLoad(event, this.key);
 		}
+		
 	});
 	return DetailBusinessView;
 });

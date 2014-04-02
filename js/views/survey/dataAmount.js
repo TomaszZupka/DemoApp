@@ -21,16 +21,17 @@ define([
 			$(this.el).html(this.template());
 
 			$(this.el).append(this.templateNavtmpl());
-			var link = $(this.el).find('a[href="#surveyDataAmount"]');
-			link.addClass("ui-disabled");
-			link.parent().attr('data-icon','false');
+			this.key = $(this.el).find("div[data-role='content']").attr('id');
+			disableCurrentLink(this.el, this.key);
 			
 			//return to enable chained calls
 			return this;
 		},
 		
 		events: {
-            "change #flip-2" : "search"
+            "change #flip-2" : "search",
+            "pagehide" : "saveFormData",
+            "pagebeforeshow" : "loadFormData"
         },
 
         search: function (event) {
@@ -47,6 +48,14 @@ define([
 
 		disable: function() {
     		$("input").closest("div").addClass("ui-state-disabled");
+		},
+		
+		saveFormData: function(event) {
+        	handleRangeSliderWithButtonSave(event, this.key);
+		},
+		
+		loadFormData: function(event) {
+			handleRangeSliderWithButtonLoad(event, this.key);
 		}
 	});
 	return DataAmountView;

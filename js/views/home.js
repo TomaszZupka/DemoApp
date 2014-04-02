@@ -27,6 +27,15 @@ define([
 
 			//return to enable chained calls
 			return this;
+		},
+		
+		events: {
+            "pagebeforehide" : "clearData"
+        },
+        
+        clearData: function() {
+        	console.log('CLEAR LOCAL STORAGE');
+			localStorage.clear();
 		}
 	});
 	return HomeView;

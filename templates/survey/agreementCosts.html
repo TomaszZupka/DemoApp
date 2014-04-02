@@ -4,17 +4,17 @@
 	<a href="#navpanel" data-icon="bars" data-iconpos="notext" class="ui-btn-right">Menu</a>
 </div>
 
-<div data-role="content" >
+<div data-role="content" id="surveyAgreementCosts">
 
 	<div class="ui-grid-solo grid-survey">
 		<div class="ui-block-a">
 			<h2>Wysokość miesięcznej opłaty (zł):</h2>
-			<form>
+			<form id="agreementCosts">
 				<div data-role="rangeslider" data-track-theme="c" data-theme="c">
 					<label for="range-3a">Wielkość:</label>
-					<input type="range" name="range-3a" id="range-3a" min="20" max="200" step="10" value="20">
+					<input type="range" name="min" id="range-3a" min="20" max="200" step="10" value="20">
 					<label for="range-3b">Wielkość:</label>
-					<input type="range" name="range-3b" id="range-3b" min="0" max="200" step="10" value="100">
+					<input type="range" name="max" id="range-3b" min="0" max="200" step="10" value="100">
 				</div>
 			</form>
 		</div>
