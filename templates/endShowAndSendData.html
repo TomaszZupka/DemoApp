@@ -14,7 +14,7 @@
 				<ul data-role="listview" data-inset="false">
 					<% for (var i = 0; i < localStorage.length; i++) { %>
 					<% var key = localStorage.key(i); %>
-					<li><%= localStorage.getItem(key) %></li>
+					<li><%= key %>: <%= localStorage.getItem(key) %></li>
 				<% } %>
 				</ul>
 			</div>
