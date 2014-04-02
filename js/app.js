@@ -3,7 +3,7 @@ define(['jquery', 'underscore', 'backbone', 'router'], function($, _, Backbone, 
 		//create backbone router
 		var router = new Router();
 		Backbone.history.start();
-		console.log("ROUTER READY");
+		// console.log("ROUTER READY");
 	};
 
 	return {

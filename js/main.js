@@ -16,7 +16,7 @@ require.config({
 //3. bootstrapping application
 define(['app','jqm-config'], function(app) {
     $(document).ready(function() {
-      console.log("DOM IS READY");// Handler for .ready() called.
+      // console.log("DOM IS READY");// Handler for .ready() called.
     });    
     app.initialize();
 });

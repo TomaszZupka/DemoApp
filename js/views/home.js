@@ -34,7 +34,7 @@ define([
         },
         
         clearData: function() {
-        	console.log('CLEAR LOCAL STORAGE');
+        	// console.log('CLEAR LOCAL STORAGE');
 			localStorage.clear();
 		}
 	});

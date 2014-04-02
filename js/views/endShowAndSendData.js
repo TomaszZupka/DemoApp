@@ -27,11 +27,6 @@ define([
 			link.addClass("ui-disabled");
 			link.parent().attr('data-icon','false');
 			
-			console.log('TEST');
-			for(var i = 0; i < localStorage.length; i++){
-    			console.log(localStorage.getItem(localStorage.key(i)));
-			}
-			
 			//return to enable chained calls
 			return this;
 		}

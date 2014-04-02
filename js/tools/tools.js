@@ -114,13 +114,13 @@ define(['jquery'], function($) {
 
 	saveDataToLocalStorage = function(key, data) {
 		var dataString = JSON.stringify(data);
-		console.log('save: ' + dataString);
+		// console.log('save: ' + dataString);
 		window.localStorage.setItem(key, dataString);
 	};
 	
 	loadDataFromLocalStorage = function(key) {
 		var data = window.localStorage.getItem(key);
-		console.log('load: ' + data);
+		// console.log('load: ' + data);
 		return JSON.parse(data);
 	};
 
